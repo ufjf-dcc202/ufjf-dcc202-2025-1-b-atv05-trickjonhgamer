@@ -6,6 +6,15 @@ document.body.append(eTabuleiro);
 for (let i = 0; i < 7; i++) {
     const eDisco = criaDisco();
     eTabuleiro.append(eDisco);
+    if(i<3){
+        eDisco.dataset.cor="Amarelo";
+    }
+   else if(i>3){
+        eDisco.dataset.cor="Laranja";
+    }
+    else{
+        eDisco.dataset.cor="Transparente";
+    }
 }
 
 function criaDisco(){
